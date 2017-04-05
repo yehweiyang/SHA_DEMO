@@ -52,7 +52,6 @@ myApp.controller('AppController', ['$scope', '$rootScope','$http','$uibModal', f
 //    };
     
     $scope.hello = function(){
-    	alert('5566no1');
     	$http.get('jump').then(function(response){
     		alert("跳去新頁面");
     	});

@@ -28,6 +28,7 @@ public class HelloWorldConfiguration extends WebMvcConfigurerAdapter{
 	public void addResourceHandlers(ResourceHandlerRegistry registry) {
 		registry.addResourceHandler("/myApp/assets/lib/**").addResourceLocations("/myApp/assets/lib/");
 		registry.addResourceHandler("/myApp/assets/js/**").addResourceLocations("/myApp/assets/js/");
+		registry.addResourceHandler("/myApp/assets/html/**").addResourceLocations("/myApp/assets/html/");
 	}
 
 }

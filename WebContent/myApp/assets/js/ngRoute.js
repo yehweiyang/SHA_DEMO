@@ -1,13 +1,20 @@
-myApp.config(['$routeProvider', function ($routeProvider) {
+myApp.config(['$routeProvider','$locationProvider','appConstant', function ($routeProvider,$locationProvider,appConstant) {
 	
+	$locationProvider.hashPrefix('');
 	$routeProvider
-	.when('/GGYY',{
-		templateUrl:'WEB-INF/view/maki.html',
-		controller:'AppController'
+	.when('/good', {
+		templateUrl: '/'+appConstant.APP_PATH+'/myApp/assets/html/Products.html',
+		controller: 'AppController'
 	})
-	.when('/insert',{
-		templateUrl:'',
-		controller:'AppController'
+	.when('/GGYY', {
+		templateUrl: '/SHA_DEMO/myApp/assets/html/Details.html',
+		controller: 'AppController'
 	})
+		.when('/insert', {
+			templateUrl: '/SHA_DEMO/myApp/assets/html/test.html',
+		})
+	.otherwise({
+		redirectTo: '/good'
+	});
 	
 }]);

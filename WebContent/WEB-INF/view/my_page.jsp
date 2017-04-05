@@ -145,17 +145,16 @@
       </div>
       
     </div>
-    <div class="container">
-    <div ng-view></div>
-    </div>
-    <a href="#/GGYY">123</a>
+
+     <a href="#/good">good</a><br>
+    <a href="#/GGYY">test</a><br>
+    <a href="#/insert">insert</a>
  <button type="button" class="btn btn-default" ng-click="open()">Open me!</button>
 <!-- 
        <button class="col-md-2 btn btn-primary btn-lg" ng-click="insert()">新增</button>
        <button class="col-md-2 btn btn-primary btn-lg" ng-click="update()">修改</button>
        <button class="col-md-2 btn btn-primary btn-lg" ng-click="cancel()">刪除</button>
  -->
-
     <div class="container">
       <!-- Example row of columns -->
       <div class="row">
@@ -183,9 +182,41 @@
   		<td>{{row.email}}</td></tr>
   		</tbody>
 		</table>
-
+<hr>
+	<div class="container" ng-view></div>
       <hr>
-
+      
+<h1>11111111111111111111</h1>
+<h1>11111111111111111111</h1>
+<h1>11111111111111111111</h1>
+<h1>11111111111111111111</h1>
+<h1>11111111111111111111</h1>
+<h1>11111111111111111111</h1>
+<h1>11111111111111111111</h1>
+<h1>11111111111111111111</h1>
+<h1>11111111111111111111</h1>
+<h1>11111111111111111111</h1>
+<h1>11111111111111111111</h1>
+<h1>11111111111111111111</h1>
+<h1>11111111111111111111</h1>
+<h1>11111111111111111111</h1>
+<h1>11111111111111111111</h1>
+<h1>11111111111111111111</h1>
+<h1>11111111111111111111</h1>
+<h1>11111111111111111111</h1>
+<h1>11111111111111111111</h1>
+<h1>11111111111111111111</h1>
+<h1 id="good">good</h1>
+<h1>11111111111111111111</h1>
+<h1>11111111111111111111</h1>
+<h1>11111111111111111111</h1>
+<h1>11111111111111111111</h1>
+<h1>11111111111111111111</h1>
+<h1>11111111111111111111</h1>
+<h1>11111111111111111111</h1>
+<h1>11111111111111111111</h1>
+<h1>11111111111111111111</h1>
+<h1><c:url value='/myApp/assets/html/'></c:url></h1>
       <footer>
         <p>&copy; Company 2014</p>
       </footer>
@@ -206,6 +237,7 @@
 
 <script src="<c:url value='/myApp/assets/js/main.js' />"></script>
 <script src="<c:url value='/myApp/assets/js/ngRoute.js' />"></script>
+<script src="<c:url value='/myApp/assets/js/appConstant.js' />"></script>
   </body>
 </html>
 
