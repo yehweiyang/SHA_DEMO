@@ -1,0 +1,71 @@
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron" ng-controoler="UserController">
+      
+       <div class="container">
+        <h1>基本資料</h1>
+        <table class="table table-border">
+        
+        <div class="form-horizontal well well-sm archives-well-fixed">
+       <div class="row">
+       <label class="col-md-2 control-label">姓氏</label>
+       <div class="col-md-4"><input type="text" class="form-control"  name="last_name" ng-model="inputVO.last_name"/></div>
+       <label class="col-md-2 control-label">名字</label>
+       <div class="col-md-4"><input type="text" class="form-control"  name="first_name" ng-model="inputVO.first_name"/></div>
+       </div>
+         <div class="row">
+       <label class="col-md-2 control-label">身分證字號</label>
+       <div class="col-md-4"><input type="text" class="form-control"  name="id" ng-model="inputVO.id"/></div>
+       <label class="col-md-2 control-label">電子信箱</label>
+       <div class="col-md-4"><input type="text" class="form-control"  name="email" ng-model="inputVO.email"/></div>
+       </div>
+       </div>
+       </table>
+      </div>
+      <div class="container">
+       <div class="row text-center">
+       <div class="col-md-3"></div>
+       <button class="col-md-2 btn btn-primary btn-lg" ng-click=query()>查詢</button>
+       <button class="col-md-2 btn btn-primary btn-lg" ng-click=insert()>新增</button>
+       <button class="col-md-2 btn btn-primary btn-lg" ng-click=nope()>取消</button>
+
+       </div>
+      </div>
+      
+    </div>
+
+     <a href="#/good">good</a><br>
+    <a href="#/GGYY">test</a><br>
+    <a href="#/insert">insert</a>
+<!-- 
+       <button class="col-md-2 btn btn-primary btn-lg" ng-click="insert()">新增</button>
+       <button class="col-md-2 btn btn-primary btn-lg" ng-click="update()">修改</button>
+       <button class="col-md-2 btn btn-primary btn-lg" ng-click="cancel()">刪除</button>
+ -->
+    <div class="container">
+      <!-- Example row of columns -->
+      <div class="row">
+      
+      
+      
+      
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@twbootstrap">Open modal for @twbootstrap</button>
+
+
+		
+      </div>
+      <table class="table table-striped">
+  		<thead><tr><th><label class="col-md-2" text-align="center">修改</label><label class="col-md-2">刪除</label></th><th>姓氏</th><th>名字</th><th>身分證字號</th><th>電子信箱</th></tr></thead>
+  		<tbody ng-repeat="row in total">
+  		<tr>
+  		<td><!-- 指出應謹慎採取此一行動 -->
+  		
+  		<label><button type="button" class="btn btn-warning" ng-click="open(row)">Warning</button></label>
+  		<label><button type="button" class="btn btn-danger">Danger</button></label>
+<!-- 指出危險或潛在負面作用的行動 -->
+</td>
+  		<td>{{row.last_name}}</td>
+  		<td>{{row.first_name}}</td>
+  		<td>{{row.id}}</td>
+  		<td>{{row.email}}</td></tr>
+  		</tbody>
+		</table>
