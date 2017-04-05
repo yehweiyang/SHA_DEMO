@@ -1,4 +1,4 @@
-var myApp = angular.module("myApp", ['ui.bootstrap']);
+var myApp = angular.module("myApp", ['ui.bootstrap','ngRoute']);
 
 myApp.controller('ModalInstanceCtrl', function ($scope,$uibModalInstance) {
 	alert('come here')
