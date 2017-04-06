@@ -7,9 +7,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class Tom {
 
 	@RequestMapping("/jump")
-	public String jump(){
-		 return  "my_page";
-		
+	public String jump() {
+		System.out.println("come to here");
+		return "my_page";
+
 	}
 
 }

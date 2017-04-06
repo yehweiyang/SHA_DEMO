@@ -7,6 +7,7 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
+import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -51,6 +52,16 @@ public class GetDBServiceImpl implements GetDBService {
 		sha = session.get(SHAEntity.class, name);
 		tx.commit();
 		return sha;
+	}
+
+	@Override
+	public List<SHAEntity> queryAll() {
+		Session  session =new ConnectDB().start(SHAEntity.class);
+		Transaction tx = session.beginTransaction();
+		Query query = session.createQuery("from SHAEntity");
+		List<SHAEntity> list = query.list();
+		tx.commit();
+		return list;
 	}
 	
 

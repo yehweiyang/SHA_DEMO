@@ -15,10 +15,9 @@ myApp.config(['$routeProvider','$locationProvider','appConstant', function ($rou
 	})
 		.when('/insert', {
 			templateUrl: '/SHA_DEMO/myApp/assets/html/test.html',
-			controller:'qooController',
 			 resolve: { // Any property in resolve should return a promise and is executed before the view is loaded
                 deps: ['$ocLazyLoad', function($ocLazyLoad) {
-                    return $ocLazyLoad.load('/'+appConstant.APP_PATH+'/myApp/assets/js/qoo.js');
+                    return $ocLazyLoad.load('/'+appConstant.APP_PATH+'/myApp/assets/js/qooController.js');
                   }]
                 }
 		})

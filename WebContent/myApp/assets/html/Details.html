@@ -1,18 +1,18 @@
-   <div class="panel panel-default" ng-controller="ModalInstanceCtrl">
+   <div class="panel panel-default">
       <div class="panel-heading">Panel Header</div>
       
       
       <div class="panel-body">
         <div class="form-horizontal well well-sm archives-well-fixed">
        <div class="row">
-       <label class="col-md-2 control-label">姓氏</label>
+       <label class="col-md-2 control-label" for="last_name">姓氏</label>
        <div class="col-md-4"><input type="text" class="form-control"  name="last_name" ng-model="last_name"/></div>
        <label class="col-md-2 control-label">名字</label>
        <div class="col-md-4"><input type="text" class="form-control"  name="first_name" ng-model="first_name"/></div>
        </div>
          <div class="row">
        <label class="col-md-2 control-label">身分證字號</label>
-       <div class="col-md-4"><input type="text" class="form-control"  name="id" ng-model="id"/></div>
+       <div class="col-md-4"><input type="text" class="form-control"  name="id" ng-model="id" ng-disabled="true"/></div>
        <label class="col-md-2 control-label">電子信箱</label>
        <div class="col-md-4"><input type="text" class="form-control"  name="email" ng-model="email"/></div>
        </div>
@@ -21,9 +21,9 @@
 		
 		<div class="panel-footer">
 		    <div class="row text-center">
-       <div class="col-md-3"></div>
+       <div class="col-md-4"></div>
        <button class="col-md-2 btn btn-primary btn-lg" ng-click=update()>確定</button>
-       <button class="col-md-2 btn btn-primary btn-lg" ng-click=cancel()>取消11</button>
+       <button class="col-md-2 btn btn-primary btn-lg" ng-click=cancel()>取消</button>
 
        </div>
 		</div>

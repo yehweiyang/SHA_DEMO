@@ -8,6 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
+
   <style>
     /* Remove the navbar's default margin-bottom and rounded borders */ 
     .navbar {
@@ -93,10 +94,14 @@
 <script src="<c:url value='/myApp/assets/lib/ui-bootstrap-tpls-2.5.0.js' />"></script>
 <script src="<c:url value='/myApp/assets/lib/angular-route.js' />"></script>
 <script src="<c:url value='/myApp/assets/lib/ocLazyLoad.min.js' />"></script>
+<script src="<c:url value='/myApp/assets/lib/paging.js' />"></script>
+<script src="<c:url value='/myApp/assets/lib/archivesService.js' />"></script>
+
 
 <script src="<c:url value='/myApp/assets/js/main.js' />"></script>
 <script src="<c:url value='/myApp/assets/js/ngRoute.js' />"></script>
 <script src="<c:url value='/myApp/assets/js/appConstant.js' />"></script>
+<script src="<c:url value='/myApp/assets/js/ModalController.js' />"></script>
 
 </body>
 </html>

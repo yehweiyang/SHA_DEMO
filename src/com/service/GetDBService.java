@@ -9,5 +9,6 @@ public interface GetDBService {
 	public void update(SHAEntity entity);
 	public void cancel(String name);
 	public SHAEntity query(String name);
+	public List<SHAEntity> queryAll();
 
 }

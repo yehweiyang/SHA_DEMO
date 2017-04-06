@@ -32,10 +32,13 @@ public class archieves {
 	ConnectDB connectDB = new ConnectDB();
 	@RequestMapping(value="query",method = RequestMethod.GET)
 	public List<SHAEntity> query(@RequestParam Map<String, Object> requestParams){
-		Gson gson = new Gson();
-		String ss = gson.toJson(getDBService.query((String)requestParams.get("id")));
 		List<SHAEntity> list = new ArrayList<SHAEntity>();
+		Object obj = requestParams.get("id");
+		if(requestParams.get("id")==null||requestParams.get("id")==""){
+			list = getDBService.queryAll();
+		}else{
 		list.add(getDBService.query((String)requestParams.get("id")));
+		}
 		return list;
 	}
 	@RequestMapping(value="insert",method = RequestMethod.POST)

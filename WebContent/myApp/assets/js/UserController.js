@@ -1,7 +1,9 @@
-angular.module('myApp').controller('UserController', ['$scope', '$rootScope','$http','$uibModal','$ocLazyLoad', function ($scope,$rootScope,$http,$uibModal,$ocLazyLoad) {
+angular.module('myApp').controller('UserController', ['$scope', '$rootScope','$http','$uibModal','$ocLazyLoad','appConstant',
+                                                      function ($scope,$rootScope,$http,$uibModal,$ocLazyLoad,appConstant) {
     $scope.$on('$viewContentLoaded', function () {
     	
     });
+    console.log(0)
     $scope.query = function(){
     	alert('XXX')
     	$http.get('query',{params :$scope.inputVO}).then(function(response){
@@ -20,43 +22,40 @@ angular.module('myApp').controller('UserController', ['$scope', '$rootScope','$h
     		console.log(data)
     	});
     }
-    $scope.update = function(){
-    	$http.put('update',$scope.inputVO).then(function(response){
-    		alert("修改成功");
+
+    
+	  
+    $scope.drop = function(data){
+    	$http.delete('cancel',{params :data}).then(function(response){
+    		alert("刪除成功");
     	});
     };
     
-//    $scope.cancel = function(){
-//    	$http.delete('cancel',{params :$scope.inputVO}).then(function(response){
-//    		alert("刪除成功");
-//    	});
-//    };
-    
-    $scope.hello = function(){
-    	$http.get('jump').then(function(response){
-    		alert("跳去新頁面");
-    	});
-    };
+    $scope.nope = function(){
+    	$scope.inputVO ={};
+    }
     
     $scope.open = function (data) {
-    	console.log(data)
         var modalInstance = $uibModal.open({
+        	animation: $scope.animationsEnabled,
           ariaLabelledBy: 'modal-title',
           ariaDescribedBy: 'modal-body',
           templateUrl: '/SHA_DEMO/myApp/assets/html/Details.html',
-          controller: 'ModalInstanceCtrl',
+          controller: 'ModalController',
           size: 'lg',
           resolve: {
+        	  //defer:$ocLazyLoad.load('/'+appConstant.APP_PATH+'/myApp/assets/js/ModalController.js'),
               param: function () {
                   return {'data':data };
               }
-          }
+          },
+          scope :$scope.param
         });
 
         modalInstance.result.then(function () {
-        	alert(5566);
-        }, function () {
+        	 $scope.query();
         });
+        return modalInstance;
       };
 
     
